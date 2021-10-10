@@ -1,0 +1,240 @@
+object ParametersDialog: TParametersDialog
+  Left = 784
+  Top = 208
+  BorderStyle = bsDialog
+  Caption = 'ccsDialogName'
+  ClientHeight = 176
+  ClientWidth = 420
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object IterationsEdit: TLabel
+    Left = 16
+    Top = 96
+    Width = 43
+    Height = 13
+    Caption = 'Iterations'
+  end
+  object RadiusLabel: TLabel
+    Left = 16
+    Top = 120
+    Width = 33
+    Height = 13
+    Caption = 'Radius'
+  end
+  object OKButton: TButton
+    Left = 256
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    TabOrder = 3
+    OnClick = OKButtonClick
+  end
+  object MaxIterationsSpinEdit1: TSpinEdit
+    Left = 64
+    Top = 96
+    Width = 57
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 1
+    Value = 0
+  end
+  object MaxRadiusSpinEdit: TSpinEdit
+    Left = 64
+    Top = 120
+    Width = 57
+    Height = 22
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 2
+    Value = 0
+  end
+  object CancelButton: TButton
+    Left = 336
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    TabOrder = 4
+    OnClick = CancelButtonClick
+  end
+  object CenterGroupBox: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 201
+    Height = 73
+    Caption = 'Center coordinates'
+    TabOrder = 0
+    object RightLabel: TLabel
+      Left = 10
+      Top = 16
+      Width = 7
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'X'
+    end
+    object LeftLabel: TLabel
+      Left = 11
+      Top = 40
+      Width = 7
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'Y'
+    end
+    object CenterXEdit: TEdit
+      Left = 24
+      Top = 16
+      Width = 161
+      Height = 21
+      TabOrder = 0
+      Text = '0'
+    end
+    object CenterYEdit: TEdit
+      Left = 24
+      Top = 40
+      Width = 161
+      Height = 21
+      TabOrder = 1
+      Text = '0'
+    end
+  end
+  object ScaleGroupBox: TGroupBox
+    Left = 216
+    Top = 8
+    Width = 201
+    Height = 89
+    Caption = 'Scale'
+    TabOrder = 5
+    object Label1: TLabel
+      Left = 10
+      Top = 16
+      Width = 7
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'X'
+    end
+    object Label2: TLabel
+      Left = 11
+      Top = 40
+      Width = 7
+      Height = 13
+      Alignment = taRightJustify
+      Caption = 'Y'
+    end
+    object ScaleXEdit: TEdit
+      Left = 24
+      Top = 16
+      Width = 161
+      Height = 21
+      TabOrder = 0
+      Text = '0'
+    end
+    object ScaleYEdit: TEdit
+      Left = 24
+      Top = 40
+      Width = 161
+      Height = 21
+      TabOrder = 1
+      Text = '0'
+    end
+    object TouchWindowCheckBox: TCheckBox
+      Left = 8
+      Top = 64
+      Width = 185
+      Height = 17
+      Caption = 'Touch window from inside'
+      TabOrder = 2
+    end
+  end
+  object CopyToClipboardButton: TBitBtn
+    Left = 176
+    Top = 114
+    Width = 25
+    Height = 25
+    Hint = 'Copy values'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 6
+    OnClick = CopyToClipboardButtonClick
+    Glyph.Data = {
+      F6020000424DF60200000000000036000000280000000E000000100000000100
+      180000000000C002000000000000000000000000000000000000C8D0D4C8D0D4
+      C8D0D4C8D0D4A0756E7443427443427443427443427443427443427443427443
+      427443420000C8D0D4C8D0D4C8D0D4C8D0D4A0756EFFF8E5F7EDD9F7EBD5F4E9
+      D1F4E9D0F4E7CFF6EAD0EEDDC47544430000C8D0D4C8D0D4C8D0D4C8D0D4A075
+      6EF7EDDCF2D9BFF2D7BBF0D5BAEFD4B5EED3B2EED9BFE5D0BA7544430000C8D0
+      D4C8D0D4C8D0D4C8D0D4A0756EFAEFDEFCC591FCC591FCC591FCC591FCC591FC
+      C591E3D1BC7544430000A0756E744342744342744342A0756EFCF4E7F6D9BAF7
+      D7B6F6D4B5F6D4B2F4D1ADF0DCC2E6D3C081524C0000A0756EFFF8E5F7EDD9F7
+      EBD5A0756EFEF6EBF8DABCF8D9B8F8D8B7F7D5B6F7D4B2F3DEC7E7D7C581524D
+      0000A0756EF7EDDCF2D9BFF2D7BBA0756EFEFAF2FCC591FCC591FCC591FCC591
+      FCC591FCC591EBDDCF8F5F5A0000A0756EFAEFDEFCC591FCC591A0756EFFFCFA
+      FCE3CCFBE0C7FADEC6F8DEC4FCE2C6FCF0DEE1D7CE8F5E590000A0756EFCF4E7
+      F6D9BAF7D7B6A0756EFFFFFFFEFFFFFBFBFBFAF8F7FAFAF6E5D5D0C6B1AFA793
+      959E675A0000A0756EFEF6EBF8DABCF8D9B8A0756EFFFFFFFFFFFFFFFEFEFFFC
+      F8FFFEFAA0756EA0756EA0756EA0756E0000A0756EFEFAF2FCC591FCC591A075
+      6EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA0756EE5A154B6735DC8D0D40000A075
+      6EFFFCFAFCE3CCFBE0C7A0756EA0756EA0756EA0756EA0756EA0756EA0756EAA
+      6D68C8D0D4C8D0D40000A0756EFFFFFFFEFFFFFBFBFBFAF8F7FAFAF6E5D5D0C6
+      B1AFA793959E675AC8D0D4C8D0D4C8D0D4C8D0D40000A0756EFFFFFFFFFFFFFF
+      FEFEFFFCF8FFFEFAA0756EA0756EA0756EA0756EC8D0D4C8D0D4C8D0D4C8D0D4
+      0000A0756EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA0756EE5A154B6735DC8D0D4
+      C8D0D4C8D0D4C8D0D4C8D0D40000A0756EA0756EA0756EA0756EA0756EA0756E
+      A0756EAA6D68C8D0D4C8D0D4C8D0D4C8D0D4C8D0D4C8D0D40000}
+  end
+  object PasteFromClipboardButton: TBitBtn
+    Left = 176
+    Top = 88
+    Width = 25
+    Height = 25
+    Hint = 'Paste values'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 7
+    OnClick = PasteFromClipboardButtonClick
+    Glyph.Data = {
+      F6020000424DF60200000000000036000000280000000E000000100000000100
+      180000000000C002000000000000000000000000000000000000C8D0D4C8D0D4
+      1B88CC1B88CC8E5D598E5D598E5D598E5D598E5D598E5D598E5D598E5D598E5D
+      598E5D590000C8D0D41B88CC74C7E967C5EBBAB7AAFBE7D3F8EEDCF6EDD7F4E9
+      D3F4E9D0F4E7D0F4E6CFF6E7CE8E5D5900001B88CC8CE1F67FEFFF72EEFFBAB7
+      AAF3DCCFF3DDC5F3D5B6F2D4B5F0D3B2F0D1ADEED4B6EBDAC28E5D5900001B88
+      CC8AE0F67AE7FF6BE6FFBAB7AAF6E1D5F7DCC0F7D0ABF7D0ABF7D0ABF6CEA5F2
+      D3B1EBDCC58E5D5900001B88CC97E2F68BEDFF7DEBFFBAB7AAF7E5DCF7DEC6F7
+      D3B1F7D4B1F6D3B0F4D0ABF2D5B6EEDECA8E5D5900001B88CCA1E5F69AEFFF8C
+      EEFFBAB7AAF8EAE2F8E7D4F8DDC2F7DDC1F7DABFF6D8BBF2DCC2EFE1D08E5D59
+      00001B88CCADE6F6ACF2FF9CF0FFBAB7AAFBF0EBFBE1C5FBD0A9FAD1AAF8D0A9
+      F8CEA4F6D8B8F4E9DA8E5D5900001B88CCB7E9F6BCF4FFACF3FFBAB7AAFEF4F0
+      FEF4EBFAEBDDFAEADAF8E7D7F8E9D8F7EBDDE1DAD38E5D5900001B88CCC0EAF6
+      D0FAFFBFF7FFBAB7AAFEF6F2FFFFFFFEFFFEFBF8F7FAFAF7EBE0D9C7ADA3B59A
+      8B8E5D5900001B88CCC7EBF6E2FCFFD0FAFFBAB7AAFFF8F6FFFFFFFFFFFFFFFF
+      FFFFFFFFD4BBB5D79255F47A41C8D0D400001B88CCCFEDF6F6FFFFE2FEFFBAB7
+      AAFBEBE2FBF2EDFBF0EBFAEFEBFAF0EDDAB4A7B79A6F1B88CCC8D0D400001B88
+      CCD0EBF6FFFFFFF2FFFFBAB7AABAB7AABAB7AABAB7AABAB7AABAB7AABAB7AA6B
+      B4CF1B88CCC8D0D400001B88CCD3EDF7F4F2F09CB7BC93B4BC91B4BB90B4BB8F
+      B4BB8BB1B89FC4CAD5FCFE6FCEF21B88CCC8D0D400001B88CCDCF6FFD5BCB1A9
+      8C80C1B0AAC1B0A9C1B0A9C1B0A9C0ACA4A68779DEE1DA78D0F41B88CCC8D0D4
+      0000C8D0D41B88CCA0C5D87E8788D9CCC6F8F7F6F7F6F4F7F6F4C2B5AD6A868F
+      73C1E01B88CCC8D0D4C8D0D40000C8D0D4C8D0D41B88CC1B88CC88786F88786F
+      88786F88786F88786F1B88CC1B88CCC8D0D4C8D0D4C8D0D40000}
+  end
+  object UsePreciseCalculationCheckBox: TCheckBox
+    Left = 16
+    Top = 152
+    Width = 113
+    Height = 17
+    Caption = 'Precise calculation'
+    TabOrder = 8
+  end
+end
